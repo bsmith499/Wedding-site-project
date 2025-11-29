@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story - Uyen & Antonio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Uyen & Antonio</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="story.html">Our Story</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="details.html">Details</a></li>
+                <li><a href="rsvp.html" class="active">RSVP</a></li>
+                <li><a href="registry.html">Registry</a></li>
+            </ul>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+<section class="rsvp-page">
+  <h1>RSVP</h1>
+
+  
+
+  <!-- RSVP Form -->
+  <form id="rsvp-form" class="rsvp-form">
+    
+    <!-- Pre-filled from token -->
+    <div class="form-group">
+      <label for="name">Name(s)</label>
+      <input type="text" id="name" name="name">
+    </div>
+
+    <!-- Attendance -->
+    <div class="form-group">
+      <label>Will you attend?</label>
+      <div class="radio-group">
+        <input type="radio" id="yes" name="attendance" value="yes" required>
+        <label for="yes">✅ Joyfully Accepts</label>
+        
+        <input type="radio" id="no" name="attendance" value="no">
+        <label for="no">❌ Regretfully Declines</label>
+      </div>
+    </div>
+
+    <!-- Plus One Count (if applicable) -->
+    <div class="form-group" id="plus-one-section">
+      <label for="plus-one">Number of Guests (including you)</label>
+      <select id="plus-one" name="plus-one">
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email (for confirmation)</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+
+    <!-- Dietary Restrictions -->
+    <div class="form-group">
+      <label for="dietary">Dietary Restrictions (optional)</label>
+      <textarea id="dietary" name="dietary" 
+                placeholder="Vegetarian, allergies, etc."></textarea>
+    </div>
+
+    <!-- Message to Couple -->
+    <div class="form-group">
+      <label for="message">Message to the Couple (optional)</label>
+      <textarea id="message" name="message" 
+                placeholder="We're so excited to celebrate with you!"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit" class="submit-button">Submit RSVP</button>
+  </form>
+
+  
+</section>
+<!-- Footer -->
+    <footer class="footer">
+        <p>With Love, Uyen & Antonio | 2026</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
