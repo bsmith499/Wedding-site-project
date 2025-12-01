@@ -414,6 +414,78 @@ a {
     text-align: center;
     background-color: white;
 }
+/* GALLERY SLIDESHOW */
+.slideshow-container {
+    max-width: 700px;
+    position: relative;
+    margin: 2rem auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 1rem;
+    color: var(--text-dark);
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    color: var(--primary-color);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+/* Fade animation */
+.fade {
+    animation: fadeEffect 1s ease;
+}
+
+@keyframes fadeEffect {
+    from { opacity: 0.4; }
+    to { opacity: 1; }
+}
+
+/* Dots */
+.slideshow-dots {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.4s ease;
+}
+
+.dot.active {
+    background-color: var(--primary-color);
+}
 
 /* RESPONSIVE */
 
@@ -426,4 +498,27 @@ a {
     .hero-card h1 { font-size: 2.5rem; }
     
     .story-page { padding: 1.5rem; }
+	
+
+}
+.toast {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 1.4rem;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    font-size: 0.95rem;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 9999;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
 }
